@@ -98,10 +98,10 @@ class CommonMovies():
       for idx, film in enumerate(self.result):
         film = film.replace("\\", "'").replace('"', '')
         print(f"{idx+1}: {film}")
-
-      print(f"\nFeeling lucky? Watch {self.random_movie}!\n")
     else:
       print(f"\nSorry! These users have no films in common!\n")
+
+    print(f"\nFeeling lucky? Watch {self.random_movie}!\n")
 
 if __name__ == '__main__':
   http = urllib3.PoolManager(ca_certs=certifi.where())
